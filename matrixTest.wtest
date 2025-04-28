@@ -1,9 +1,17 @@
-
+import matrix.*
 
 describe "group of tests " {
 
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "morfeo salta y queda con vitalidad en 7" {
+    morfeo.salta()
+    assert.equals(7, morfeo.vitalidad())
   }
-
+  test "morfeo salta y pasa a estar cansado" {
+    morfeo.salta()
+    assert.that(morfeo.estaCansado())
+  }
+  test "neo salta y su energia pasa a ser de 50" {
+    neo.salta()
+    assert.equals(50, neo.energia())
+  }
 }
